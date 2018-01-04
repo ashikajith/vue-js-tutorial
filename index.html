@@ -8,11 +8,24 @@
   </head>
   <body>
       <div id="vue-app">
-        <h1>{{greet('Afternoon')}}</h1>
-        <p>{{name}}</p>
-        <p>
-          Job: {{job}}
-        </p>
+        <h1>Data Binding</h1>
+        <a v-bind:href="website">Go to Google</a>
+        <input type="text" name="name" :value="name">
+        <p v-html='websiteTag'></p>
+        <p>Name : {{name}}</p>
+      </div>
+      <div id="vue-data-bind">
+<!--  Event Course -->
+        <h1>Events</h1>
+        <button @click='addYear(1)'> Add a Year</button>
+        <button v-on:click='substractYear(1)'> Substract a Year</button>
+<!-- This works on Double Click -->
+        <button @dblclick='addYear(10)'> Add a Year</button>
+        <button v-on:dblclick='substractYear(10)'> Substract a Year</button>
+        <p> My age is {{age}}</p>
+        <div id='canvas' v-on:mousemove='updateXY'>
+          {{x}}, {{y}}
+        </div>
       </div>
   </body>
   <script type="text/javascript" src=app.js></script>
