@@ -27,6 +27,13 @@
           {{x}}, {{y}}
         </div>
       </div>
+<!-- Keyboard Events  -->
+  <div id="keyboard-event-app">
+      <h1>Key Board Events</h1>
+      <label> Name </label>
+      <input type="text" v-on:keyup.enter='logName' />
+      <input type="text" v-on:keyup.alt.enter='logAge' >
+  </div>
   </body>
   <script type="text/javascript" src=app.js></script>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bunch Game</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="bunch-app">
+      <!-- bag Image -->
+      <div id="bag" v-bind:class="{burst: ended}"></div>
+      <!-- bag Health -->
+      <div id="bag-health">
+        <div v-bind:style="{width: health + '%'}"> </div>
+      </div>
+      <!-- Game Controls -->
+      <div id="controls">
+        <button v-on:click = "punch" v-show="!ended"> Punch </button>
+        <button @click = "restart"> Restart </button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src=bunch.js> </script>
+</html>

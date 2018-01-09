@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Js Tutorials</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id='loop-for'>
+      <h1>Looping thorugh List</h1>
+      <ul>
+        <li v-for="(character, index) in characters">{{index}}. {{character}}</li>
+      </ul>
+      <ul>
+        <li v-for="(ninja, index) in ninjas">{{index}}.{{ninja.name}} - {{ninja.age}}</li>
+      </ul>
+      <template v-for="(ninja, index) in ninjas">
+        <h3>{{index}}, {{ninja.name}}</h3>
+        <p>{{ninja.age}}</p>
+      </template>
+
+      <template v-for="ninja in ninjas">
+        <div v-for="(val,key) in ninja">
+          <p>
+            {{key}} - {{val}}
+          </p>
+        </div>
+      </template>
+    </div>
+  </body>
+  <script type="text/javascript" src=app.js></script>
+</html>
